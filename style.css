@@ -1,0 +1,93 @@
+/* Navbar */
+.header {
+    background-color: #2f53a2;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.header-icon {
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+/* Main content */
+.content-section {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.about-us, .vision, .mission {
+    margin-bottom: 40px;
+}
+
+/* Footer */
+.footer {
+    background-color: #2f53a2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer ion-icon {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Body */
+body {
+    padding-top: 80px; /* Adjust to navbar height */
+}
+/* CSS for the About Us Cover Image */
+.about-us-cover {
+    position: relative; /* Để định vị các thành phần bên trong nếu cần */
+    overflow: hidden; /* Ẩn các phần của ảnh nếu vượt ra ngoài */
+}
+
+.about-us-cover img {
+    width: 100%; /* Chiều rộng đầy đủ của container */
+    height: auto; /* Giữ tỉ lệ của ảnh */
+    display: block; /* Loại bỏ khoảng trống dưới ảnh */
+}
+
+/* Optional: Add some styles for the About Us section */
+.about-us {
+    padding: 20px; /* Khoảng cách bên trong */
+    background-color: #f9f9f9; /* Màu nền */
+}
+
+/* CSS for the visible class */
+.about-us, .vision, .mission, .international-standard-system img {
+    opacity: 0; /* Ban đầu ẩn */
+    transform: translateY(20px); /* Di chuyển nhẹ xuống */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Hiệu ứng chuyển tiếp */
+}
+
+.about-us.visible, .vision.visible, .mission.visible, .international-standard-system img.visible {
+    opacity: 1; /* Hiển thị */
+    transform: translateY(0); /* Trở lại vị trí ban đầu */
+}
